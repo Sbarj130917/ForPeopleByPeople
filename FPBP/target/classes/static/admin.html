@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html ng-app="admin" class="no-js">
+<head>
+<meta charset="utf-8">
+<title>FOR PEOPLE BY PEOPLE</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ================= Favicon ================== -->
+<!-- Standard -->
+<link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+<!-- Retina iPad Touch Icon-->
+<link rel="apple-touch-icon" sizes="144x144"
+	href="http://placehold.it/144.png/000/fff">
+<!-- Retina iPhone Touch Icon-->
+<link rel="apple-touch-icon" sizes="114x114"
+	href="http://placehold.it/114.png/000/fff">
+<!-- Standard iPad Touch Icon-->
+<link rel="apple-touch-icon" sizes="72x72"
+	href="http://placehold.it/72.png/000/fff">
+<!-- Standard iPhone Touch Icon-->
+<link rel="apple-touch-icon" sizes="57x57"
+	href="http://placehold.it/57.png/000/fff">
+
+<!-- Styles -->
+<link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+<link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+<link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+<link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+<link href="assets/css/lib/sidebar.css" rel="stylesheet">
+<link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+
+<link href="assets/css/lib/helper.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
+
+<script
+	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="assets/js/admin.js"></script>
+<!-- <script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+    });
+</script> -->
+<!-- Fonts -->
+<!-- <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'
+    rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,700'
+    rel='stylesheet' type='text/css'>
+Bootsrap
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<script src="assets/js/bootstrap.min.js"></script>
+Font awesome
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+Owl carousel
+<link rel="stylesheet" href="assets/css/owl.carousel.css">
+Template main Css
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/categorytablestyle.css">
+Modernizr
+ <script src="assets/js/modernizr-2.6.2.min.js"></script> -->
+
+<style>
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+</style>
+
+<script type="text/javascript">
+window.history.forward();
+function noBack() { 
+	window.history.forward(); }
+</script>
+
+</head>
+
+<body ng-controller="adminController" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+	<div
+		class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+		<div class="nano">
+			<div class="nano-content">
+				
+				<ul>
+					
+					<br>
+					<li><a class="sidebar-sub-toggle" >
+							<h4>Admin Dashboard</h4>
+					</a>
+					<li class="label">Tables</li>
+					<li><a href="" ng-click="seekers()"> Help Seeker</a></li>
+					<li><a href="" ng-click="donors()"> Help Provider</a></li>
+					<li class="label">Other</li>
+
+
+
+					<li><a ng-click="logout()"> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap">
+
+		<br>
+		<div class="row">
+			<div class="col-lg-8 p-r-0 title-margin-right">
+				<div class="page-header">
+					<div>
+						<h3>
+							<center>
+								Hello, <span>Admin</span>
+							</center>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+
+			<!-- Tables -->
+			<!-- <div style="overflow-x:auto;"> -->
+			<!-- <div class="table-responsive" max-height: 550px; max-width: 100%; overflow-y: scroll;"> -->
+
+			<div class="table-responsive"
+				style="padding: 50px; max-height: 550px; max-width: 100%; overflow-y: scroll;"
+				ng-if="seekerMessage">
+
+
+				<table class="table table-hover">
+					<tr>
+						<th><font size="2">Id</font></th>
+						<th><font size="2">Organization Name</font></th>
+						<th><font size="2">Address</font></th>
+						<th><font size="2">Contact</font></th>
+						<th><font size="2">Website</font></th>
+						<th><font size="2">Email</font></th>
+						<th><font size="2">Requirement</font></th>
+						<th><font size="2">Quantity</font></th>
+						<th><font size="2">Category</font></th>
+						<th><a href="" ng-click="addSeekerShoww()"><button>Add</button></font></th>
+
+					</tr>
+					<tr ng-repeat="detail in details">
+						<td><span><font size="2">{{detail.sid}}</font></span></td>
+						<td><span><font size="2">{{detail.orgName}}</font></span></td>
+						<td><font size="2">{{detail.address}}</font></td>
+						<td><font size="2">{{detail.contactNo}}</font></td>
+						<td><font size="2">{{detail.website}}</font></td>
+						<td><font size="2">{{detail.email}}</font></td>
+						<td><font size="2">{{detail.requirement}}</font></td>
+						<td><font size="2">{{detail.quantity}}</font></td>
+						<td><font size="2">{{detail.category}}</font></td>
+						<td><a href="#" ng-click="deleteSeeker(detail)"
+							title="Delete"><I><font color="red" size="2">Delete</font></I></a>
+							<span class="glyphicon glyphicon-trash"></span>
+							</button></td>
+						</font>
+					</tr>
+				</table>
+
+				<div class="addContainer" ng-controller="adminController"
+					ng-if="addSeekerShow">
+					<form name="addSeekerForm" ng-submit="addSeeker()">
+
+						<input type="text" id="orgname" name="orgname" size="5"
+							ng-model="seeker.orgname"
+							placeholder="Your name or Organization name" required> <input
+							type="text" id="address" name="address" size="8" ng-model="seeker.address"
+							placeholder="Address.." required> <input type="number"
+							onKeyPress="if(this.value.length==10) return false;"
+							id="contact_no" name="contact_no" size="2" ng-model="seeker.contact_no"
+							placeholder="Phone Number.." required> <input type="text"
+							id="website" name="website"  size="5" ng-model="seeker.website"
+							placeholder="Website if any.."> <input type="email"
+							id="email" name="email" size="5" ng-model="seeker.email"
+							placeholder="Email Id.." required> <input type="text"
+							id="requirement" name="requirement" size="10" ng-model="seeker.requirement"
+							placeholder="Your Need.." required> <input type="number"
+							id="quantity" name="quantity" size="5" ng-model="seeker.quantity"
+							placeholder="Quantity.." required> <select id="category"
+							ng-model="seeker.category" required>
+							<option selected disabled hidden style='display: none' value=''></option>
+							<option value="Food" selected>Food</option>
+							<option value="Education">Education</option>
+							<option value="Clothing">Clothing</option>
+							<option value="Housing">Housing</option>
+							<option value="Financial">Financial</option>
+						</select> <input type="submit" value="Add Seeker">
+					</form>
+				</div>
+
+			</div>
+
+
+			<div class="table-responsive"
+				style="padding: 50px; max-height: 550px; max-width: 100%; overflow-y: scroll;"
+				ng-if="donorMessage">
+
+
+				<table class="table table-hover">
+					<tr>
+						<th><font size="2">Id</font></th>
+						<th><font size="2">Name</font></th>
+						<th><font size="2">Address</font></th>
+						<th><font size="2">Contact</font></th>
+						<th><font size="2">Email</font></th>
+						<th><font size="2">Hours of Operation</font></th>
+						<th><font size="2">Website</font></th>
+						<th><font size="2">Category</font></th>
+						<th><a ng-click="addProviderShoww()"><button>Add</button></th>
+
+					</tr>
+					<tr ng-repeat="detail in details">
+						<td><span><font size="2">{{detail.id}}</font></span></td>
+						<td><span><font size="2">{{detail.name}}</font></span></td>
+						<td><font size="2">{{detail.address}}</font></td>
+						<td><font size="2">{{detail.contactNo}}</font></td>
+						<td><font size="2">{{detail.email}}</font></td>
+						<td><font size="2">{{detail.hoursOfOperation}}</font></td>
+						<td><font size="2">{{detail.website}}</font></td>
+						<td><font size="2">{{detail.category}}</font></td>
+						<td><a href="#" ng-click="deleteDonor(detail)" title="Delete"><I><font
+									color="red" size="2">Delete</font></I></a> <span
+							class="glyphicon glyphicon-trash"></span>
+							</button></td>
+						</font>
+					</tr>
+				</table>
+
+				<div class="addContainer" ng-controller="adminController"
+					ng-if="addProviderShow">
+					<form name="addEntryForm" ng-submit="addProvider()">
+
+						<input type="text" id="org_name" name="org_name" size="10"
+							ng-model="provider.org_name"
+							placeholder="Your name or Organization name" required> <input
+							type="text" id="address" name="address" size="10"
+							ng-model="provider.address" placeholder="Address" required>
+
+						<input type="number"
+							onKeyPress="if(this.value.length==10) return false;"
+							id="contact_no" name="contact_no" size="5" ng-model="provider.contact_no"
+							placeholder="Phone Number.." required> <input
+							type="email" id="email" name="email" size="10" ng-model="provider.email"
+							placeholder="Email Id" required> <input type="text"
+							id="hoursOfOperation" name="hourOfOperation" size="10"
+							ng-model="provider.hoursOfOperation"
+							placeholder="What are you donating" required> <input
+							type="text" id="website" name="website" size="10"
+							ng-model="provider.website" placeholder="Website if any">
+
+						<select id="category" ng-model="provider.category">
+							<option selected disabled hidden style='display: none' value=''></option>
+							<option selected value="Food">Food</option>
+							<option value="Education">Education</option>
+							<option value="Clothing">Clothing</option>
+							<option value="Housing">Housing</option>
+							<option value="Financial">Financial</option>
+						</select> <input type="submit" value="Add Provider">
+					</form>
+				</div>
+
+
+				<div class="row">
+					<div class="col-lg-8 p-r-0 title-margin-right">
+						<div class="page-header">
+							<!-- <div>
+                                <h3>tables</h3>
+                            </div> -->
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+				<div></div>
+</body>
+</html>

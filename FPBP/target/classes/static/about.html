@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html ng-app="demoApp" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>About | For People By People</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Bootsrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!-- Template main Css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!-- Modernizr -->
+        <script src="assets/js/modernizr-2.6.2.min.js"></script>
+        	<script
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
+	<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
+
+		<script src="assets/js/controller.js"></script>
+
+    </head>
+    <body ng-controller="demoCtrl">
+    <!-- NAVBAR
+    ================================================== -->
+
+	
+	<div ng-init="load()"></div>
+    <header class="main-header">
+        
+    
+        <nav class="navbar navbar-static-top">
+
+            <div class="navbar-top">
+
+              <div class="container">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+980 980 9800 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:contact@sadaka.org">contact@fpbp.org</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
+                    </div>
+						<div align="right" -webkit-order=2><b>{{email}}</b>
+	   &nbsp;&nbsp;&nbsp;<a id="logout" ng-click="logout()">Logout</a></div>
+               
+                  </div>
+              </div>
+
+            </div>
+
+            <div class="navbar-main">
+              
+              <div class="container">
+
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                  </button>
+                  
+                  <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="" width="150dp" height="100dp"></a>
+                  <a class="navbar-brand" >For People By People</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse pull-right">
+
+                  <ul class="nav navbar-nav">
+
+                   <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a class="is-active" href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                   
+                  </ul>
+
+                </div> <!-- /#navbar -->
+                
+     
+
+              </div> <!-- /.container -->
+              
+            </div> <!-- /.navbar-main -->
+
+		   </nav> 
+		
+
+    </header> <!-- /. main-header -->
+
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">ABOUT US <span class="title-under"></span></h1>
+			<p class="page-description">
+			For People By People ensures people find and connect with the help they need
+			</p>
+			
+		</div>
+
+	</div>
+
+	<div class="main-container">
+
+		<div class="container">
+
+			<div class="row fadeIn animated">
+
+				<div class="col-md-6">
+
+					<img src="assets/images/about-us.jpg" alt="" class="img-responsive">
+
+				</div>
+
+				<div class="col-md-6">
+
+					<h2 class="title-style-2">What we do ?<span class="title-under"></span></h2>
+
+					<p>
+						For People By People makes it easy for People in need who are not able to connect to the people who want to help and the vice versa, there are various variables that play a part here like accurate data, transportation, accessibility of the available solutions, etc. We as a FPBP team have come up with this product to bridge the gap between people in need and people who can suffice the need. 
+						</p>
+						<p>
+						Often we are restricted in helping each other by the  availability  of  data,  which is either present and we are not aware of it or its not viable. People are in need and there is an abundance of resources available to them, but they may not have the proper access to know of such resources when they need assistance. Often users rely on word or mouth, previous experience , or search endlessly on the internet. We have recognized the need for people to be able to gather the right information and get to the help they need.  We want to provide them with the ability to bridge data and technology at the palm of their hands for whenever they need assistance or want to help others.
+					</p>
+				</div>
+
+			</div> <!-- /.row -->
+
+			<div class="section-home about-us">
+
+
+			            <div class="row">
+
+			                <div class="col-md-3 col-sm-6">
+			                
+			                  <div class="about-us-col">
+
+			                        <div class="col-icon-wrapper">
+			                          <img src="assets/images/icons/our-mission-icon.png" alt="">
+			                        </div>
+			                        <h3 class="col-title">our mission</h3>
+			                        <div class="col-details">
+
+			                          <p>For individual and organizations that help people navigate social needs, the FPBP Search Platform provides instant access to comprehensive listings with hundreds of programs.</p>
+			                          
+			                        </div>
+			          
+			                    
+			                  </div>
+			                  
+			                </div>
+
+
+			                <div class="col-md-3 col-sm-6">
+			                
+			                  <div class="about-us-col">
+
+			                        <div class="col-icon-wrapper">
+			                          <img src="assets/images/icons/make-donation-icon.png" alt="">
+			                        </div>
+			                        <h3 class="col-title">Make donations</h3>
+			                        <div class="col-details">
+
+			                          <p>FPBP will also support donation of money to any cause, in near future</p>
+			                          
+			                        </div>
+			                    
+			                  </div>
+			                  
+			                </div>
+
+
+			                <div class="col-md-3 col-sm-6">
+			                
+			                  <div class="about-us-col">
+
+			                        <div class="col-icon-wrapper">
+			                          <img src="assets/images/icons/help-icon.png" alt="">
+			                        </div>
+			                        <h3 class="col-title">Help & support</h3>
+			                        <div class="col-details">
+
+			                          <p>FPBP team can help you if you have any issues regarding 'My Account', 'FInding Programs', 'Connecting to Programs','Saving and sharing programs' </p>
+			                          
+			                        </div>
+			                    
+			                  </div>
+			                  
+			                </div>
+
+
+			                <div class="col-md-3 col-sm-6">
+			                
+			                  <div class="about-us-col">
+
+			                        <div class="col-icon-wrapper">
+			                          <img src="assets/images/icons/programs-icon.png" alt="">
+			                        </div>
+			                        <h3 class="col-title">our programs</h3>
+			                        <div class="col-details">
+
+			                          <p>FPBP have programs supporting following categories : food, housing, clothing, education and financial</p>
+			                          
+			                        </div>
+			                    
+			                  </div>
+			                  
+			                </div>
+			                
+
+			                
+			            </div> <!-- /.row -->
+
+			      
+			    </div> 
+
+		</div> <!-- /.about-us -->
+
+
+	    <div class="our-team animate-onscroll fadeIn">
+
+	        <div class="container">
+
+	            <h2 class="title-style-1">Our Team <span class="title-under"></span></h2>
+
+	            <div class="row">
+
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="assets/images/team/member-1.jpg" alt="" class="cause-img" height="300" >
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name"><a href="#">Rashi Jain</a></h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                        
+
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="assets/images/team/member-3.jpg" alt="" class="cause-img" height="300" >
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name"><a href="#">Shaily Barjatya</a></h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                       
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+	      
+	                <div class="col-md-3 col-sm-6">
+
+	                    <div class="team-member">
+
+	                        <div class="thumnail">
+
+	                            <img src="assets/images/team/member-2.jpg" alt="" class="cause-img" height="300">
+	                            
+	                        </div>
+
+
+
+	                        <h4 class="member-name"><a href="#">Priyanka Taneja</a></h4>
+
+	                        <div class="member-position">
+	                            CO-FOUNDER
+	                        </div>
+
+	                    </div> <!-- /.team-member -->
+	                    
+	                </div>
+
+	            </div> <!-- /.row -->
+
+	        </div>
+
+	    </div>
+		
+
+
+	</div>
+
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
+
+        <!-- Bootsrap javascript file -->
+        <script src="assets/js/bootstrap.min.js"></script>
+
+
+        <!-- Template main javascript -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
